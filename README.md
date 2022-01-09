@@ -13,5 +13,11 @@ This project is a simple production grade React Boilerplate.
 - Husky (Pre-commit)
 - Sonarcube scanner (local setup)
 
-_NOTE: Detailed guide to setup this Simple React Boilerplate is coming soon.._
-_till then, fork/clone this project to use it in your projects_
+### Project Details
+
+Node version: v16 (16.13.1)
+
+React version: v17 (17.0.2)
+
+_NOTE: Detailed guide to setup this Simple React Boilerplate on your own, is coming soon.._
+_till then, clone/fork this project to use it in your projects_
