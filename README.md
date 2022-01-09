@@ -1,7 +1,8 @@
 # React Boilerplate (Simplified)
 
 This project is a simple production grade React Boilerplate.
-(To use it for new future React Projects)
+
+This boilerplate project is highly scalable and performance focused. It is made using best practices.
 
 ## This boilerplate includes the following setups
 
