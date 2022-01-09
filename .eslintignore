@@ -1,0 +1,12 @@
+# path/to/project/root/.eslintignore
+# /node_modules/* and /bower_components/* in the project root are ignored by default
+
+node_modules
+
+# Ignore built files
+dist
+
+# JSON files
+
+# webpack config files
+webpack.*.js

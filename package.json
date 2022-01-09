@@ -10,9 +10,21 @@
     "build": "rimraf dist && webpack --config webpack.prod.js",
     "dev-default": "webpack serve",
     "build-default": "webpack",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc",
     "regenerate-package-lock": "npm cache clean --force && rimraf node_modules && rm package-lock.json && npm install"
   },
-  "author": "",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --quiet --fix"
+    ],
+    "*.{json,css,scss,html,md}": [
+      "prettier --write"
+    ]
+  },
+  "author": "codr-mayank",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -21,8 +33,14 @@
     "@svgr/webpack": "^6.1.2",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
     "mini-css-extract-plugin": "^2.4.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

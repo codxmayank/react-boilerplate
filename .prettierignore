@@ -1,0 +1,7 @@
+# path/to/project/root/.prettierignore
+# /node_modules/* and /bower_components/* in the project root are ignored by default
+
+node_modules
+
+# Ignore built files
+dist
