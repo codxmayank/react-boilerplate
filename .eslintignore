@@ -10,3 +10,6 @@ dist
 
 # webpack config files
 webpack.*.js
+
+# sonarcube-scanner config
+sonarcube.js
