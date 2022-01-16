@@ -10,8 +10,8 @@
     "build": "rimraf dist && webpack --config webpack.prod.js",
     "dev-default": "webpack serve",
     "build-default": "webpack",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix --max-warnings 0",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc",
     "sonar": "node sonarcube.js",
     "downloadSonar": "docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube",
@@ -20,11 +20,11 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --quiet --fix"
+      "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc",
+      "eslint ./src --fix --max-warnings 0"
     ],
     "*.{json,css,scss,html,md}": [
-      "prettier --write"
+      "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc"
     ]
   },
   "author": "codr-mayank",
